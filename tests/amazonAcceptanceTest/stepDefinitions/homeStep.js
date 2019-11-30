@@ -1,10 +1,10 @@
-import homePage from '../pageObjects/homePage';
-import { defineSupportCode } from 'cucumber';
+import homePage from '../pageObjects/homePage'
+import { Given, When, Then } from 'cucumber'
 
-defineSupportCode(function({Then}){
-
+Given(/^I go to home page$/, () => {
+  homePage.open()
 })
 
-defineSupportCode(function({When}){
-    
+When(/^I click on TodaysDealLink$/, () => {
+  homePage.clickOnTodaysDealLink()
 })
