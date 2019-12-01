@@ -3,47 +3,48 @@ import BasePage from './basePage'
 import todaysDealPage from './todaysDealPage'
 
 class HomePage extends BasePage {
-  get todaysDealLink () {
-    // return this.findElement('//div[@id="nav-xshop"]/a[text()="Today\'s Deals"]');
-    return this.findElement('//div[@id="nav-xshop"]/a[text()="Black Friday"]')
+  get todaysDealLink() {
+    // return this.findElement('//div[@id="nav-xshop"]/a[text()="Today\'s Deals"]')
+    // return this.findElement('//div[@id="nav-xshop"]/a[text()="Black Friday"]')
+    return this.findElement('//div[@id="nav-xshop"]/a[text()="Cyber Monday"]')
   }
 
-  get signinLink () { return this.findElement('#nav-link-accountList') }
+  get signinLink() { return this.findElement('#nav-link-accountList') }
 
-  get emailInput () { return this.findElement('#ap_email') }
+  get emailInput() { return this.findElement('#ap_email') }
 
-  get continueButton () { return this.findElement('#continue') }
+  get continueButton() { return this.findElement('#continue') }
 
-  get passwordInput () { return this.findElement('#ap_password') }
+  get passwordInput() { return this.findElement('#ap_password') }
 
-  get signinButton () { return this.findElement('#signInSubmit') }
+  get signinButton() { return this.findElement('#signInSubmit') }
 
-  clickOnTodaysDealLink () {
+  clickOnTodaysDealLink() {
     this.todaysDealLink.click()
     return todaysDealPage
   }
 
-  clickOnSigninLink () {
+  clickOnSigninLink() {
     this.signinLink.click()
     return this
   }
 
-  inputEmail (email) {
+  inputEmail(email) {
     this.emailInput.addValue(email)
     return this
   }
 
-  clickContinueButton () {
+  clickContinueButton() {
     this.continueButton.click()
     return this
   }
 
-  inputPassword (password) {
+  inputPassword(password) {
     this.passwordInput.addValue(password)
     return this
   }
 
-  clickSigninButton () {
+  clickSigninButton() {
     this.signinButton.click()
     return this
   }

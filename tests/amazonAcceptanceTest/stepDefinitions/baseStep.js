@@ -1,5 +1,7 @@
 import userData from '../data/userData'
 import homePage from '../pageObjects/homePage'
+import searchDealsPage from '../pageObjects/searchDealsPage'
+import todaysDealPage from '../pageObjects/todaysDealPage'
 import { Given, When, Then } from 'cucumber'
 
 const buffEmail = new Buffer.from(userData.get('email').value, 'base64')
@@ -23,8 +25,23 @@ When(/^I login by ME accout$/, () => {
     .clickSigninButton()
 })
 
+When(/^I go to view cart$/, () => {
+  homePage.goToViewCartPage()
+})
+
 Then(/^I am on page \"(.*)\"$/, (pageName) => {
-  homePage.iAmOnPage(pageName)
+  assert.isNotFalse(homePage.iAmOnPage(pageName), `It's not ${pageName}`)
+})
+
+When(/^I search product \"(.*)\"$/, (keyword) => {
+  homePage.findProductBySearch(keyword)
+})
+
+When(/^I select \"(.*)\" as sort by value$/, (sortTextValue) => {
+  if (searchDealsPage.iAmOnPage("searchDealsPage")) {
+    searchDealsPage.selectSortByValue(sortTextValue);
+  } else { todaysDealPage.selectSortByValue(sortTextValue) }
+
 })
 
 When(/^I select the \"(.*)\" deal$/, (nthValue) => {
@@ -39,4 +56,11 @@ When(/^I select the \"(.*)\" deal$/, (nthValue) => {
     dealElement = homePage.findElement(dealSelector)
     dealElement.click()
   }
+})
+
+When(/^I select view deal product at the \"(.*)\" item$/, (nthValue) => {
+  if (searchDealsPage.iAmOnPage("searchDealsPage")) {
+    searchDealsPage.selectViewDealProduct(nthValue);
+  } else { todaysDealPage.selectViewDealProduct(nthValue) }
+
 })

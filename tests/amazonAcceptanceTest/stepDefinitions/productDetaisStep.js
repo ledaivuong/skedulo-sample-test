@@ -12,3 +12,11 @@ When(/^I click on Add To Cart Button$/, () => {
 When(/^I add price of product as \"(.*)\" of context$/, (nameOfProperty) => {
   productDetailsPage.addPriceToContext(nameOfProperty)
 })
+
+When(/^I calculate price \"(.*)\" of \"(.*)\" items and add to context as \"(.*)\"$/, (nameOfProperty, quantity, result) => {
+  productDetailsPage.calculatePriceAndAddToContext(nameOfProperty, quantity, result)
+})
+
+When(/^I calculate total price of \"(.*)\" and add to context as \"(.*)\"$/, (arrayOfProperty, result) => {
+  productDetailsPage.calculateTotalPriceAndAddToContext(arrayOfProperty, result)
+})
