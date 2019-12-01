@@ -2,6 +2,10 @@
 
 # If you want to know specific what test do please refer
 skedulo-sample-test/tests/amazonAcceptanceTest/features/checkout.feature
+- BDD
+- Page Object Design Partern
+- Allure Report
+- WebdriverIO Frameword
 
 # Prepare Environtment
 1. Download and Install Node: https://nodejs.org/en/
