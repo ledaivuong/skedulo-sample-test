@@ -1,5 +1,5 @@
 {
-  "name": "skedulo-sample-test",
+  "name": "wizeline-sample-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ledaivuong/skedulo-sample-test.git"
+    "url": "git+https://github.com/ledaivuong/wizeline-sample-test.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ledaivuong/skedulo-sample-test/issues"
+    "url": "https://github.com/ledaivuong/wizeline-sample-test/issues"
   },
-  "homepage": "https://github.com/ledaivuong/skedulo-sample-test#readme",
+  "homepage": "https://github.com/ledaivuong/wizeline-sample-test#readme",
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
