@@ -62,3 +62,6 @@ npm run test
 ```
 npm run htmlReport
 ```
+
+### Video Demo
+https://www.youtube.com/watch?v=idVa1nHRKbs
