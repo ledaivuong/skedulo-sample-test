@@ -1,7 +1,7 @@
 # WizeLine Sample Project
 
 # Introduction
-## Test case Manual
+## Test Manual
 ### TC1: Verify that form validation working correctly
 1. Verify design of page, it should be displayed correctly cross-browsers
 2. Verify that user can see the correct errors when leave empty into the require fields: [First name], [Last name], [Email address], [Date of Birth], [Gender], [Languages] 
