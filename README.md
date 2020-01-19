@@ -1,4 +1,4 @@
-# skedulo-sample-test
+# WizeLine Sample Project
 
 # If you want to know specific what test do please refer
 skedulo-sample-test/tests/amazonAcceptanceTest/features/checkout.feature
@@ -11,6 +11,7 @@ skedulo-sample-test/tests/amazonAcceptanceTest/features/checkout.feature
 1. Download and Install Node: https://nodejs.org/en/
 2. Download and Install JavaSDK: https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
 3. Config JAVA_HOME path environtment
+4. Please make sure your Chrome browser have updated to 79.x.x version. 
 
 # Install Dependencies
 ```
