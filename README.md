@@ -10,7 +10,7 @@
 5. Check error script on page or any console log
 6. Ad-hoc security testing: SQL Injection, Cross-site scripting 
 ### TC2: Verify that user can submit form
-1. Input valid datas
+1. Input valid data
 2. Click on Next button
 3. Verify that browser lead to Address submit form
 ## Test Automation
