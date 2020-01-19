@@ -13,7 +13,7 @@ exports.config = {
   },
   runner: 'local',
   specs: [
-    './tests/amazonAcceptanceTest/features/*.feature'
+    './tests/features/*.feature'
   ],
   maxInstances: 1,
   capabilities: [{
@@ -23,7 +23,7 @@ exports.config = {
   logLevel: 'error',
   deprecationWarnings: true,
   bail: 0,
-  baseUrl: 'https://www.amazon.com.au/',
+  baseUrl: "https://www.utest.com/",
   waitforTimeout: 15000,
   //
   // Default timeout in milliseconds for request
@@ -36,7 +36,7 @@ exports.config = {
   cucumberOpts: {
     timeout: 20000,
     requireModule: ['@babel/register'],
-    require: ['./tests/amazonAcceptanceTest/stepDefinitions/*.js']
+    require: ['./tests/stepDefinitions/*.js']
   },
   before: function (capabilities, specs) {
     // =================
@@ -49,8 +49,10 @@ exports.config = {
     // ======================
     // Global Variable
     // ======================
-    global.baseUrl = 'https://www.amazon.com.au/'
+    global.baseUrl = "https://www.utest.com/"
     global.context = {}
+    global.shortTimeout = 10000
+    global.longTimeout = 30000
     // ===============
     // Custom Commands
     // ===============
